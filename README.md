@@ -1,3 +1,5 @@
+
+# Day 1
 # CareerConnect Backend 🚀
 
 CareerConnect Backend is a Job Portal REST API built using Spring Boot.
@@ -60,7 +62,7 @@ kuruvalakshmanna4154@gmail.com
 
 -----
 
-
+# Day 2
 # 🚀 CareerConnect Backend
 
 A modern **Job Portal Backend REST API** built with **Java, Spring Boot, Spring Data JPA, Hibernate, and MySQL** following industry-standard layered architecture and best backend development practices.
@@ -329,3 +331,69 @@ Software / Java Developer
 ---
 
 ⭐ **Every commit is a step toward becoming a better software engineer.!**
+
+----
+
+#Day 3
+
+# 🚀 CareerConnect Backend
+
+CareerConnect Backend is a RESTful Job Portal application built using **Spring Boot**, **Spring Data JPA**, **Hibernate**, and **MySQL**. It provides APIs for user registration and demonstrates a clean layered architecture for Java backend development.
+
+## 🛠 Tech Stack
+
+- Java 21
+- Spring Boot 3.x
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
+- Postman
+- Git & GitHub
+
+## ✨ Features
+
+- User Registration API
+- Input Validation
+- RESTful APIs
+- Exception Handling
+- Layered Architecture
+- MySQL Database Integration
+
+## ▶️ Getting Started
+
+```bash
+git clone https://github.com/KURUVALAKSHMANNA/careerconnect-backend.git
+cd careerconnect-backend
+mvn spring-boot:run
+```
+
+The application runs at:
+
+```
+http://localhost:8080
+```
+
+## 📌 API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/users/register` | Register a new user |
+
+## 🚀 Future Enhancements
+
+- JWT Authentication
+- Spring Security
+- Job Management
+- Resume Upload
+- Swagger Documentation
+- Docker Deployment
+
+## 👨‍💻 Author
+
+**Lakshmanna K**
+
+GitHub: https://github.com/KURUVALAKSHMANNA
+Email: kuruvalakshmanna4154@gmail.com
+
+⭐ If you found this project useful, please give it a star!
