@@ -1,6 +1,5 @@
 package com.lakshmanna.careerconnect.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +10,7 @@ import com.lakshmanna.careerconnect.dto.UserRequest;
 import com.lakshmanna.careerconnect.dto.UserResponse;
 import com.lakshmanna.careerconnect.service.UserService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -26,7 +26,7 @@ public class UserController {
 	
 	@PostMapping("/register")
 	public ResponseEntity<UserResponse> registerUser(
-			@RequestBody UserRequest request) {
+			@Valid @RequestBody UserRequest request) {
 		
 		UserResponse response = userService.registerUser(request);
 		
