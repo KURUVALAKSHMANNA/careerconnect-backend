@@ -1,6 +1,5 @@
 
-# Day 1
-# CareerConnect Backend 🚀
+# Day 1 - CareerConnect Backend 🚀
 
 CareerConnect Backend is a Job Portal REST API built using Spring Boot.
 
@@ -62,8 +61,8 @@ kuruvalakshmanna4154@gmail.com
 
 -----
 
-# Day 2
-# 🚀 CareerConnect Backend
+
+# Day 2 - 🚀 CareerConnect Backend
 
 A modern **Job Portal Backend REST API** built with **Java, Spring Boot, Spring Data JPA, Hibernate, and MySQL** following industry-standard layered architecture and best backend development practices.
 
@@ -334,9 +333,7 @@ Software / Java Developer
 
 ----
 
-#Day 3
-
-# 🚀 CareerConnect Backend
+# Day 3 - 🚀 CareerConnect Backend
 
 CareerConnect Backend is a RESTful Job Portal application built using **Spring Boot**, **Spring Data JPA**, **Hibernate**, and **MySQL**. It provides APIs for user registration and demonstrates a clean layered architecture for Java backend development.
 
@@ -397,3 +394,57 @@ GitHub: https://github.com/KURUVALAKSHMANNA
 Email: kuruvalakshmanna4154@gmail.com
 
 ⭐ If you found this project useful, please give it a star!
+
+---
+
+# Day 4 - User Authentication with Spring Security & BCrypt
+
+## 📌 Overview
+On Day 4 of building my **CareerConnect - Job Portal Application**, I implemented **User Authentication** using **Spring Security** and **BCrypt Password Encoding**. User passwords are now securely encrypted before storing them in the database, making the application more secure.
+
+## 🚀 Features Implemented
+- ✅ User Registration API
+- ✅ User Login API
+- ✅ Spring Security Integration
+- ✅ BCrypt Password Encryption
+- ✅ Password Verification using BCrypt
+- ✅ PasswordEncoder Configuration
+- ✅ API Testing using Postman
+
+## 🛠️ Tech Stack
+- Java 21
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
+- Postman
+
+## 📮 API Endpoints
+- **POST** `/api/users/register`
+- **POST** `/api/users/login`
+
+## 📚 What I Learned
+- Spring Security Basics
+- BCrypt Password Encoding
+- PasswordEncoder
+- Secure User Authentication
+- Password Verification
+- REST API Testing with Postman
+
+## 🚀 Next Steps
+- Configure SecurityFilterChain
+- JWT Authentication
+- Role-Based Authorization
+- Secure Protected APIs
+
+## 📬 Contact
+- **Name:** Lakshmanna K
+- **Email:** kuruvalakshmanna4154@gmail.com
+- **GitHub:** https://github.com/KURUVALAKSHMANNA/careerconnect-backend
+- **LinkedIn:** https://www.linkedin.com/in/lakshmanna-kuruva-749250334/
+
+---
+
+⭐ **CareerConnect** is a full-stack Job Portal application built with **Java, Spring Boot, React, and MySQL**.
