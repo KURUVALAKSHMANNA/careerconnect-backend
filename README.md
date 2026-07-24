@@ -54,10 +54,8 @@ src/main/java/com/lakshmanna/careerconnect
 
 **Lakshmanna K**
 
-GitHub:
-https://github.com/KURUVALAKSHMANNA
-Email:
-kuruvalakshmanna4154@gmail.com
+GitHub: https://github.com/KURUVALAKSHMANNA
+Email: kuruvalakshmanna4154@gmail.com
 
 -----
 
@@ -439,8 +437,8 @@ On Day 4 of building my **CareerConnect - Job Portal Application**, I implemente
 - Role-Based Authorization
 - Secure Protected APIs
 
-## 📬 Contact
-- **Name:** Lakshmanna K
+# 👨‍💻 Author
+- **Lakshmanna K**
 - **Email:** kuruvalakshmanna4154@gmail.com
 - **GitHub:** https://github.com/KURUVALAKSHMANNA/careerconnect-backend
 - **LinkedIn:** https://www.linkedin.com/in/lakshmanna-kuruva-749250334/
