@@ -2,6 +2,7 @@ package com.lakshmanna.careerconnect.service;
 
 import java.time.LocalDateTime;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.lakshmanna.careerconnect.dto.LoginRequest;
@@ -10,6 +11,7 @@ import com.lakshmanna.careerconnect.dto.UserRequest;
 import com.lakshmanna.careerconnect.dto.UserResponse;
 import com.lakshmanna.careerconnect.entity.User;
 import com.lakshmanna.careerconnect.repository.UserRepository;
+import com.lakshmanna.careerconnect.security.JwtUtil;
 
 
 @Service
@@ -17,6 +19,9 @@ public class UserService {
 
 	private final BCryptPasswordEncoder passwordEncoder;
 	private final UserRepository userRepository;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
 	
 	public UserService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
 		this.userRepository = userRepository;
@@ -64,6 +69,8 @@ public class UserService {
 			throw new RuntimeException("Invalid Password");
 		}
 		
+		String token = jwtUtil.generateToken(user.getEmail());
+	
 		LoginResponse response = new LoginResponse();
 		
 		response.setMessage("Login Successful");
@@ -72,7 +79,11 @@ public class UserService {
 		response.setEmail(user.getEmail());
 		response.setRole(user.getRole());
 		
+		response.setToken(token);
+		
 		return response;
+		
+		
 	}
 	
 //	=================

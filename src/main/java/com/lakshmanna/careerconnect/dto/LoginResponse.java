@@ -1,11 +1,24 @@
 package com.lakshmanna.careerconnect.dto;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+@JsonPropertyOrder({
+	"userId",
+	"firstName",
+	"email",
+	"message",
+	"role",
+	"token"
+})
+
 public class LoginResponse {
-	private String message;
+	
 	private Long userId;
 	private String firstName;
 	private String email;
 	private String role;
+	private String message;
+	
+	private String token;
 	
 	public LoginResponse() {
 		
@@ -39,7 +52,7 @@ public class LoginResponse {
 		this.userId = userId;
 	}
 	
-	public String getFirstString() {
+	public String getFirstName() {
 		return firstName;
 	}
 	
@@ -61,5 +74,13 @@ public class LoginResponse {
 	
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+	public String getToken() {
+		return token;
+	}
+	
+	public void setToken(String token) {
+		this.token = token;
 	}
 }
