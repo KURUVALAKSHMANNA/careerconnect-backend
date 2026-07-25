@@ -318,7 +318,7 @@ This project is being developed to gain practical experience with:
 
 # 👨‍💻 Author
 
-## Lakshmanna K
+**Lakshmanna K**
 
 Software / Java Developer
 
@@ -374,6 +374,7 @@ http://localhost:8080
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/api/users/register` | Register a new user |
+| Post | `/api/users/login`  | Login existing user |
 
 ## 🚀 Future Enhancements
 
@@ -446,3 +447,59 @@ On Day 4 of building my **CareerConnect - Job Portal Application**, I implemente
 ---
 
 ⭐ **CareerConnect** is a full-stack Job Portal application built with **Java, Spring Boot, React, and MySQL**.
+
+-----
+
+# CareerConnect - Day 5: JWT Authentication & Token Generation
+
+## 📌 Overview
+On Day 5 of building my **CareerConnect - Job Portal Application**, I implemented **JWT (JSON Web Token) Authentication**. After a successful login, the application now generates and returns a JWT token, which will be used to secure protected APIs in the upcoming modules.
+
+## 🚀 Features Implemented
+- ✅ Added JWT dependencies
+- ✅ Created `JwtUtil` class
+- ✅ Configured Secret Key for JWT
+- ✅ Generated JWT token after successful login
+- ✅ Integrated JWT with Login API
+- ✅ Updated Login Response to include JWT token
+- ✅ Tested JWT generation using Postman
+
+## 🛠️ Tech Stack
+- Java 21
+- Spring Boot
+- Spring Security
+- JWT (JJWT)
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
+- Postman
+
+## 📮 API Endpoints
+- **POST** `/api/users/register`
+- **POST** `/api/users/login`
+
+## 📚 What I Learned
+- JSON Web Token (JWT) Basics
+- JWT Structure (Header, Payload, Signature)
+- Token Generation using JJWT
+- Integrating JWT into Spring Boot
+- Returning JWT in API Responses
+- Testing JWT Authentication using Postman
+
+## 🔜 Next Steps
+- Validate JWT Token
+- Create JWT Authentication Filter
+- Secure Protected APIs
+- Implement Role-Based Authorization
+
+---
+
+# 👨‍💻 Author
+- **Lakshmanna K**
+- kuruvalakshmanna4154@gmail.com
+- **GitHub:** httpshttps://www.linkedin.com/in/lakshmanna-kuruva-749250334/
+
+---
+
+⭐ **CareerConnect** is a full-stack Job Portal application built using **Java, Spring Boot, React, and MySQL**. It is designed to provide a secure and scalable platform where job seekers can explore opportunities and employers can post and manage job listings.
