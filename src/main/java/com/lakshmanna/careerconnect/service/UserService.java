@@ -2,7 +2,6 @@ package com.lakshmanna.careerconnect.service;
 
 import java.time.LocalDateTime;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.lakshmanna.careerconnect.dto.LoginRequest;
@@ -19,13 +18,14 @@ public class UserService {
 
 	private final BCryptPasswordEncoder passwordEncoder;
 	private final UserRepository userRepository;
-	
-	@Autowired
 	private JwtUtil jwtUtil;
 	
-	public UserService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
+	public UserService(UserRepository userRepository, 
+			           BCryptPasswordEncoder passwordEncoder,
+			           JwtUtil jwtUtil) {
 		this.userRepository = userRepository;
 		this.passwordEncoder = passwordEncoder;
+		this.jwtUtil = jwtUtil;
 	}
 	
 //	=====================
@@ -40,6 +40,7 @@ public class UserService {
 		if(userRepository.existsByPhoneNumber(request.getPhoneNumber())) {
 			return new UserResponse("Phone Number already exists...");
 		}
+		
 		User user = new User();
 		
 		user.setFirstName(request.getFirstName());
@@ -63,10 +64,13 @@ public class UserService {
 	
 	public LoginResponse loginUser(LoginRequest request) {
 		User user = userRepository.findByEmail(request.getEmail())
-				.orElseThrow(() -> new RuntimeException("Invalid Email"));
+				.orElseThrow(() -> new RuntimeException("Invalid Email or Password"));
 		
-		if(!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-			throw new RuntimeException("Invalid Password");
+		if(!passwordEncoder.matches(
+				request.getPassword(),
+				user.getPassword())) {
+			
+			throw new RuntimeException("Invalid Email or Password");
 		}
 		
 		String token = jwtUtil.generateToken(user.getEmail());

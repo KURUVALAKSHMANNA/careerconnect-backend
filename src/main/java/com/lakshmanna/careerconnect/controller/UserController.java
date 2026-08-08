@@ -1,6 +1,7 @@
 package com.lakshmanna.careerconnect.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,6 +42,12 @@ public class UserController {
 	public ResponseEntity<LoginResponse> loginUser(
 			@Valid @RequestBody LoginRequest request) {
 		return ResponseEntity.ok(userService.loginUser(request));
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<LoginResponse> getUserById(
+			@PathVariable Long Id) {
+		return ResponseEntity.ok(userService.getUserById(Id));
 	}
 
 }
